@@ -52,11 +52,9 @@ export default function Master() {
                                     </Typography></div>
                                 </Grid>
                                 <Grid item xs={1} style={{marginTop:"1%"}}>
-                              <div>      <Typography style={{color:"white"}} onClick={() => handleLinkClick("Branches")}>Branches</Typography></div>
+                              <div>      <Typography style={{color:"white"}} onClick={() => handleLinkClick("Branches")}>Image</Typography></div>
                                 </Grid>
-                                <Grid item xs={1} style={{marginTop:"1%"}}>
-                              <div>      <Typography style={{color:"white"}} onClick={() => handleLinkClick("Coffeeimagemage")}>Image</Typography></div>
-                                </Grid>
+                                
                             </Grid>
                         </div>
                     </Box>
