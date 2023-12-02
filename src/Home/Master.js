@@ -31,27 +31,27 @@ export default function Master() {
                 <div >
                     <Box sx={{ width: '100%', margin:"0"}}>
                         <div style={{}}>
-                            <Grid container style={{marginTop:"1%"}} >
+                            <Grid container >
                             <Grid item >
                             <img src={Coffeecup } style={{width:"40%",marginLeft:"40%"}} />
                                 </Grid>
-                            <Grid item xs={5} style={{marginTop:"%"}}>
+                            <Grid item xs={6} style={{marginTop:"1.2%"}}>
                                     <Typography style={{color:"white", fontSize:"25px", fontfamily:'Brush Script MT'}}>Me With Coffee</Typography>
                                 </Grid>
-                                <Grid item xs={1} style={{marginTop:"1%"}}>
+                                <Grid item xs={1} style={{marginTop:"1.5%"}}>
                                     <div  > <Typography onClick={() => handleLinkClick("Home")}style={{color:"white"}}>
                                      Home
                                         </Typography></div>
                                 </Grid>
-                                <Grid item xs={1} style={{marginTop:"1%"}}>
+                                <Grid item xs={1} style={{marginTop:"1.5%"}}>
                                 <div> <Typography style={{color:"white"}}onClick={() => handleLinkClick("Menu")}>Menu</Typography></div>
                                 </Grid>
-                                <Grid item xs={1}style={{marginTop:"1%"}}>
+                                <Grid item xs={1}style={{marginTop:"1.5%"}}>
                                 <div>  <Typography
                                 onClick={() => handleLinkClick("Contact")} style={{color:"white"}}>Contact
                                     </Typography></div>
                                 </Grid>
-                                <Grid item xs={1} style={{marginTop:"1%"}}>
+                                <Grid item xs={1} style={{marginTop:"1.5%"}}>
                               <div>      <Typography style={{color:"white"}} onClick={() => handleLinkClick("Branches")}>Image</Typography></div>
                                 </Grid>
                                 
