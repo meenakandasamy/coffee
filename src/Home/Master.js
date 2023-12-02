@@ -35,8 +35,8 @@ export default function Master() {
                             <Grid item >
                             <img src={Coffeecup } style={{width:"40%",marginLeft:"40%"}} />
                                 </Grid>
-                            <Grid item xs={5} style={{marginTop:"1%"}}>
-                                    <Typography style={{color:"white", fontSize:"20px" , fontfamily:'Brush Script MT'}}>Me With Coffee</Typography>
+                            <Grid item xs={5} style={{marginTop:"%"}}>
+                                    <Typography style={{color:"white", fontSize:"25px", fontfamily:'Brush Script MT'}}>Me With Coffee</Typography>
                                 </Grid>
                                 <Grid item xs={1} style={{marginTop:"1%"}}>
                                     <div  > <Typography onClick={() => handleLinkClick("Home")}style={{color:"white"}}>
