@@ -30,10 +30,10 @@ export default function Master() {
      
                 <div >
                     <Box sx={{ width: '100%', margin:"0"}}>
-                        <div style={{}}>
+                        <div >
                             <Grid container >
                             <Grid item >
-                            <img src={Coffeecup } style={{width:"40%",marginLeft:"40%"}} />
+                            <img src={Coffeecup } style={{width:"30%",marginLeft:"40%"}} />
                                 </Grid>
                             <Grid item xs={6} style={{marginTop:"1.2%"}}>
                                     <Typography style={{color:"white", fontSize:"25px", fontfamily:'Brush Script MT'}}>Mee With Coffee</Typography>

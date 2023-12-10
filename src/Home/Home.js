@@ -9,7 +9,7 @@ const Home = () => {
     return (
         <div>
 <div >
-<img src={restaurantcoffee} style={{width:"100%",height:"100vh"}}/>
+<img src={restaurantcoffee} style={{width:"100%",height: "89vh"}}/>
 </div>
 
 </div>
