@@ -13,7 +13,7 @@ export default function Menu() {
         <div>
             <div>
                 <div>
-                    <img src={Menubackground} style={{ width: "100%", height: "89.5vh" }} />
+                    <img src={Menubackground} style={{ width:"100%", height: "89.5vh" }} />
                 </div>
                 <div style={{ marginTop: "-42%" }}>
                     <Grid container style={{ marginTop: "-28%"}} >
