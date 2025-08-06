@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/coffee/static/css/main.995b7484.css",
-    "main.js": "/coffee/static/js/main.61bc1329.js",
+    "main.css": "/coffee/static/css/main.0e1f2231.css",
+    "main.js": "/coffee/static/js/main.cb73ad11.js",
     "static/media/Menubackground.png": "/coffee/static/media/Menubackground.33a5d899f1fbb367bcb1.png",
     "static/media/Minttea.png": "/coffee/static/media/Minttea.97fc2eea41444d623d9a.png",
     "static/media/restaurantcoffee.png": "/coffee/static/media/restaurantcoffee.0d7cda2639662d4b62d3.png",
@@ -36,11 +36,11 @@
     "static/media/chocolatemilk.avif": "/coffee/static/media/chocolatemilk.e34508dc3a3df503e230.avif",
     "static/media/Bananamilk.jpg": "/coffee/static/media/Bananamilk.00bb6af3438a6ce6fe47.jpg",
     "index.html": "/coffee/index.html",
-    "main.995b7484.css.map": "/coffee/static/css/main.995b7484.css.map",
-    "main.61bc1329.js.map": "/coffee/static/js/main.61bc1329.js.map"
+    "main.0e1f2231.css.map": "/coffee/static/css/main.0e1f2231.css.map",
+    "main.cb73ad11.js.map": "/coffee/static/js/main.cb73ad11.js.map"
   },
   "entrypoints": [
-    "static/css/main.995b7484.css",
-    "static/js/main.61bc1329.js"
+    "static/css/main.0e1f2231.css",
+    "static/js/main.cb73ad11.js"
   ]
 }
