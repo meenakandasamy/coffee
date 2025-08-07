@@ -6,9 +6,14 @@ width: 100%;
 color: #ffffff;
 
 
+
+}
+body {
+  margin: 0;
+  padding: 0;
 }
 .image-scrren{
     background: linear-gradient(to top,#882424, #ca8c60);
-    margin-top: -1%;
+  
 
 }

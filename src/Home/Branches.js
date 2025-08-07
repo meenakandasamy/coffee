@@ -54,12 +54,10 @@ export default function Branches() {
             <Box sx={{ width: '100%', margin: "0" }}>
                 
                 <div style={{ marginLeft: "3%" }}>
-                    <Grid container style={{ marginTop: "1%" }} >
+                    <Grid container>
                     <Grid item xs={11}>
                     <div>
                 <Typography style={{marginTop:"1%",fontSize:"22px",color:"white"}}>Coffee & Tea</Typography>
-               
-            
                 </div>
                 </Grid>
              

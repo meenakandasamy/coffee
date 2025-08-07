@@ -1,140 +1,176 @@
+import React from 'react';
 import Grid from '@mui/material/Grid';
-import Paper from '@mui/material/Paper';
 import Box from '@mui/material/Box';
-import { styled } from '@mui/material/styles';
-import { Link } from '@mui/material';
+import Typography from '@mui/material/Typography';
 import Menubackground from '../Images/Menubackground.png';
-// import chai from '../Image/chai.png';
+
 export default function Menu() {
-    const Item = styled(Paper)(({ theme }) => ({
-    }));
+  return (
+    <Box sx={{ 
+      position: "relative", 
+      width: "100%", 
+      minHeight: "calc(100vh - 80px)", // Account for header height
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+      overflow: 'hidden'
+    }}>
+      {/* Fullscreen Background Image */}
+      <Box
+        component="img"
+        src={Menubackground}
+        sx={{
+          width: "100%",
+          height: "100%",
+          objectFit: "cover",
+          position: "absolute",
+          top: 0,
+          left: 0,
+          zIndex: -1
+        }}
+        alt="Menu background"
+      />
+      
+      {/* Dark overlay for better text readability */}
+      <Box sx={{
+        position: "absolute",
+        top: 0,
+        left: 0,
+        width: "100%",
+        height: "100%",
+        backgroundColor: "rgba(0, 0, 0, 0.5)",
+        zIndex: -1
+      }} />
 
-    return (
-        <div>
-            <div>
-                <div>
-                    <img src={Menubackground} style={{ width:"100%", height: "89.5vh" }} />
-                </div>
-                <div style={{ marginTop: "-42%" }}>
-                    <Grid container style={{ marginTop: "-28%"}} >
-                    <Grid  item xs={4.9}>
-                        </Grid>
-                        <Grid item xs={6} style={{margintop:"6%"}}>
-                            {/* <div style={{ color: "white", fontSize: "38px"}}>  Mee with Coffee </div> */}
-                         
-                        </Grid>
-                        <Grid xs={6} >
-                            <div style={{ color: "white", fontSize: "30px" ,marginLeft:"32%",marginTop:"5.5%"}}>Coffee & Chai Varieties </div>
-                        </Grid>
-                        <Grid xs={6} >
-                            <div style={{ color: "white", fontSize: "30px" ,marginLeft:"27%",marginTop:"5.5%"}}> Milkshakes Varieties  </div>
-                        </Grid>
-                        <Grid xs={3} style={{marginTop:"3%"}}>
-                            <div>
-                            <div style={{ color: "#ffffff", fontSize: "25px",marginLeft:"60%"}}>Masala Tea </div>
-                            <div style={{ color: "white", fontSize: "25px",marginLeft:"60%",marginTop:"3%"}}>Green Tea  </div>
-                            <div style={{ color: "white", fontSize: "25px",marginLeft:"60%",marginTop:"3%"}}>Filter coffee </div>
-                            <div style={{ color: "white", fontSize: "25px",marginLeft:"60%",marginTop:"3%"}}>Mint Tea </div>
-                            {/* <div style={{ color: "white",color: "white", fontSize: "22px",marginLeft:"30%",marginTop:"1%"}}>Green Tea </div>
-                            <div style={{ color: "white",color: "white", fontSize: "22px",marginLeft:"30%",marginTop:"1%"}}>cardamom Tea </div>
-                            <div style={{ color: "white",color: "white", fontSize: "22px",marginLeft:"30%",marginTop:"1%"}}>Mint Tea </div>
-                            <div style={{ color: "white",color: "white", fontSize: "22px",marginLeft:"30%",marginTop:"1%"}}>B </div> */}
-</div>
-                        </Grid> 
-                        <Grid xs={3} style={{marginTop:"3%"}} >
-                            
-                            <div > 
-                            <div style={{ color: "white", fontSize: "25px",marginLeft:"9%"}}> Lemon Tea</div>
-                            <div style={{ color: "white", fontSize: "25px",marginTop:"3%",marginLeft:"9%"}}>Cardamom Tea </div>
-                            <div style={{ color: "white", fontSize: "25px",marginTop:"3%",marginLeft:"9%"}}>Ginger Tea </div>
-                            <div style={{ color: "white", fontSize: "25px",marginTop:"3%",marginLeft:"9%"}}>Instant Coffee </div>
-                          
-                            </div>
+      {/* Main Content Container */}
+      <Box sx={{ 
+        width: "100%",
+        maxWidth: "1200px",
+        margin: "0 auto",
+        padding: { xs: 2, md: 4 },
+        boxSizing: "border-box",
+        zIndex: 1
+      }}>
+        <Typography 
+          variant="h2" 
+          sx={{ 
+            textAlign: 'center', 
+            fontWeight: 'bold',
+            mb: 6,
+            color: "white",
+            textShadow: '2px 2px 4px rgba(0,0,0,0.8)'
+          }}
+        >
+          Our Menu
+        </Typography>
 
-                        </Grid> 
-                        <Grid xs={3} style={{marginTop:"3%"}} >
-                            
-                            <div > 
-                            <div style={{ color: "white", fontSize: "25px",marginLeft:"23%"}}>Banana Milkshakes</div>
-                            <div style={{ color: "white", fontSize: "25px",marginTop:"3%",marginLeft:"23%"}}>Berry Milkshakes </div>
-                            <div style={{ color: "white", fontSize: "25px",marginTop:"3%",marginLeft:"23%"}}>Chocolate Milkshakes </div>
-                            <div style={{ color: "white", fontSize: "25px",marginTop:"3%",marginLeft:"23%"}}>Fig Milkshakes </div>
-                          
-                            </div>
+        <Grid container spacing={4} sx={{ color: "white" }}>
+          {/* Coffee & Chai Section */}
+          <Grid item xs={12} md={6}>
+            <MenuSection 
+              title="Coffee & Chai Varieties"
+              items={[
+                ["Masala Tea", "Green Tea"],
+                ["Filter Coffee", "Mint Tea"],
+                ["Lemon Tea", "Cardamom Tea"],
+                ["Ginger Tea", "Instant Coffee"]
+              ]}
+            />
+          </Grid>
 
-                        </Grid> 
-                        <Grid xs={3} style={{marginTop:"3%"}} >
-                            
-                            <div > 
-                            <div style={{ color: "white", fontSize: "25px"}}>Oreo Milkshakes</div>
-                            <div style={{ color: "white", fontSize: "25px",marginTop:"3%"}}>Kitkatmilk Milkshakes </div>
-                            <div style={{ color: "white", fontSize: "25px",marginTop:"3%"}}>Dryfruit Milkshakes </div>
-                            <div style={{ color: "white", fontSize: "25px",marginTop:"3%"}}>Nuts Milkshakes </div>
-                          
-                            </div>
+          {/* Milkshakes Section */}
+          <Grid item xs={12} md={6}>
+            <MenuSection 
+              title="Milkshake Varieties"
+              items={[
+                ["Banana Milkshake", "Berry Milkshake"],
+                ["Chocolate Milkshake", "Fig Milkshake"],
+                ["Oreo Milkshake", "KitKat Milkshake"],
+                ["Dryfruit Milkshake", "Nuts Milkshake"]
+              ]}
+            />
+          </Grid>
 
-                        </Grid> 
-                        <Grid xs={6} >
-                            <div style={{ color: "white", fontSize: "30px" ,marginLeft:"40%",marginTop:"8.5%"}}>Snacks Varieties</div>
-                        </Grid>
-                        <Grid xs={6} >
-                            <div style={{ color: "white", fontSize: "30px" ,marginLeft:"20%",marginTop:"8.5%"}}> Noodle & Sandwish Varieties </div>
-                        </Grid>
-                        <Grid xs={3} style={{marginTop:"3%"}}>
-                            <div style={{marginTop:"-3%"}}>
-                            <div style={{ color: "#ffffff", fontSize: "25px",marginLeft:"60%"}}>Paneer Puff </div>
-                            <div style={{ color: "white", fontSize: "25px",marginLeft:"60%",marginTop:"3%"}}>Mint Puff </div>
-                            <div style={{ color: "white", fontSize: "25px",marginLeft:"60%",marginTop:"3%"}}>Veg coffee </div>
-                            <div style={{ color: "white", fontSize: "25px",marginLeft:"60%",marginTop:"3%"}}>Nuggets </div>
-                            <div style={{ color: "white", fontSize: "25px",marginLeft:"60%",marginTop:"3%"}}>Aloo Bonda  </div>
-                            <div style={{ color: "white", fontSize: "25px",marginLeft:"60%",marginTop:"3%"}}>Cheese Balls </div>
-        
-</div>
-                        </Grid> 
-                        <Grid xs={3} style={{marginTop:"3%"}} >
-                            
-                            <div  style={{marginTop:"-3%"}}> 
-                            <div style={{ color: "white", fontSize: "25px",marginLeft:"9%"}}>Mini Samosa</div>
-                            <div style={{ color: "white", fontSize: "25px",marginTop:"3%",marginLeft:"9%"}}>Onion Bajji </div>
-                            <div style={{ color: "white", fontSize: "25px",marginTop:"3%",marginLeft:"9%"}}>Mushroom Puff </div>
-                            <div style={{ color: "white", fontSize: "25px",marginTop:"3%",marginLeft:"9%"}}>Onion Puff </div>
-                            <div style={{ color: "white", fontSize: "25px",marginTop:"3%",marginLeft:"9%"}}>Pav Bajji </div>
-                            <div style={{ color: "white", fontSize: "25px",marginTop:"3%",marginLeft:"9%"}}>Momos </div>
-                            </div>
+          {/* Snacks Section */}
+          <Grid item xs={12} md={6}>
+            <MenuSection 
+              title="Snack Varieties"
+              items={[
+                ["Paneer Puff", "Mint Puff"],
+                ["Veg Cutlet", "Nuggets"],
+                ["Aloo Bonda", "Cheese Balls"],
+                ["Mini Samosa", "Onion Bajji"],
+                ["Mushroom Puff", "Onion Puff"],
+                ["Pav Bhaji", "Momos"]
+              ]}
+            />
+          </Grid>
 
-                        </Grid> 
-                        <Grid xs={3} style={{marginTop:"3%"}} >
-                            
-                            <div style={{marginTop:"-3%"}}> 
-                        
-                            <div style={{ color: "white", fontSize: "25px",marginLeft:"23%"}}>Masala Meggi</div>
-                            <div style={{ color: "white", fontSize: "25px",marginTop:"3%",marginLeft:"23%"}}>Veg Noodles</div>
-                            <div style={{ color: "white", fontSize: "25px",marginTop:"3%",marginLeft:"23%"}}>Chilli Chese Noodles </div>
-                            <div style={{ color: "white", fontSize: "25px",marginTop:"3%",marginLeft:"23%"}}>Manchuriyan </div>
-                          
-                            </div>
+          {/* Noodle & Sandwich Section */}
+          <Grid item xs={12} md={6}>
+            <MenuSection 
+              title="Noodle & Sandwich Varieties"
+              items={[
+                ["Masala Maggi", "Veg Noodles"],
+                ["Chilli Cheese Noodles", "Manchurian"],
+                ["Corn Mayo Sandwich", "Corn Sandwich"],
+                ["Chilli Cheese Sandwich", "Veg Sandwich"]
+              ]}
+            />
+          </Grid>
+        </Grid>
+      </Box>
+    </Box>
+  );
+}
 
-                        </Grid> 
-                        <Grid xs={3} style={{marginTop:"3%"}} >
-                            
-                            <div style={{marginTop:"-3%"}}> 
-                           
-                            <div style={{ color: "white", fontSize: "25px"}}>Corn Mayo Sandwich</div>
-                            <div style={{ color: "white", fontSize: "25px",marginTop:"3%"}}>Corn Sandwich </div>
-                            <div style={{ color: "white", fontSize: "25px",marginTop:"3%"}}>Chilli Chees Sandwich </div>
-                            <div style={{ color: "white", fontSize: "25px",marginTop:"3%"}}>Veg Sandwich </div>
-                          
-                            </div>
-
-                        </Grid> 
-                    </Grid>
-                    <div>
-
-                    </div>
-
-                </div>
-            </div>
-
-        </div>
-    )
+// Reusable Menu Section Component
+function MenuSection({ title, items }) {
+  return (
+    <Box sx={{ mb: 4 }}>
+      <Typography 
+        variant="h3" 
+        sx={{ 
+          textAlign: 'center', 
+          fontWeight: 'bold',
+          mb: 3,
+          color: "white",
+          textShadow: '2px 2px 4px rgba(0,0,0,0.8)'
+        }}
+      >
+        {title}
+      </Typography>
+      
+      <Grid container spacing={2}>
+        {items.map((pair, index) => (
+          <React.Fragment key={index}>
+            <Grid item xs={6}>
+              <Typography 
+                variant="h5" 
+                sx={{ 
+                  textAlign: 'center', 
+                  mb: 2,
+                  fontWeight: 500
+                }}
+              >
+                {pair[0]}
+              </Typography>
+            </Grid>
+            <Grid item xs={6}>
+              <Typography 
+                variant="h5" 
+                sx={{ 
+                  textAlign: 'center', 
+                  mb: 2,
+                  fontWeight: 500
+                }}
+              >
+                {pair[1]}
+              </Typography>
+            </Grid>
+          </React.Fragment>
+        ))}
+      </Grid>
+    </Box>
+  );
 }
