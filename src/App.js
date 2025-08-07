@@ -11,7 +11,7 @@ import Coffeeimage from "./Home/Coffeeimage";
 function App() {
   return (
     <div className="App">
-      <Router>
+      <Router basename="coffee">
         <Routes>
           <Route exact path="/home" element={<Home/>} />
           <Route exact path="/" element={<Master/>} />
